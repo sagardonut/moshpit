@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Munch Pit Color Palette */
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --card-dark: #141414;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #FF5A1F;
+  --primary-foreground: #ffffff;
+  --primary-hover: #ff7340;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #ffffff;
+  --muted: #666666;
+  --muted-foreground: #999999;
+  --accent: #00FF00;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: #FF5A1F;
+  --radius: 0.5rem;
+  
+  /* Custom colors for Munch Pit */
+  --flame-orange: #FF5A1F;
+  --flame-orange-light: #ff7340;
+  --neon-green: #00FF00;
+  --neon-green-hover: #00cc00;
+  --charcoal: #1a1a1a;
+  --charcoal-dark: #0a0a0a;
+  --charcoal-light: #2a2a2a;
+  --smoke: #666666;
+  --ash: #999999;
+  --ember: #ff3300;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Geist', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --font-display: 'Oswald', 'Impact', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[#0a0a0a] text-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(255, 90, 31, 0.3);
+  color: #fff;
+}
